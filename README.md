@@ -45,10 +45,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 -   Path helpers in src/paths.ts
 -   Use auth (cookies make pages dynamic) and still make page static. Home page was dynamic because of header. Instead of using the "const session = await auth()" within the Header Server component, we will render the Client component HeaderAuth and delegate the handling of the session to that component
 -   Form validation with zod and FormStateTypes
--   Form loading state
+-   Form loading state used in `src/components/common/form-button.tsx`
 -   useFormState action with additional param using bind
 -   Typescript Awaited type in src/db/queries/posts.ts
--   Request memoization in src/db/queries/comments.ts to reduce amount of queries to the DB
--   Suspense + Skeleton components to improve loading experience in src/app/topics/[slug]/posts/[postId]/page.tsx
+-   Request memoization in `src/db/queries/comments.ts` to reduce amount of queries to the DB
+-   Suspense + Skeleton components to improve loading experience in `src/app/topics/[slug]/posts/[postId]/page.tsx`
 -   Access query string param from client component wrapped in Suspense: src/components/search-input.tsx
 -   Access query string param from Server component: src/app/search/page.tsx

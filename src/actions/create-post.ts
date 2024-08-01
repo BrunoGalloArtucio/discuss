@@ -6,7 +6,6 @@ import paths from "@/paths";
 import { Post } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-import { CreateTopicFormState } from "./create-topic";
 import { redirect } from "next/navigation";
 
 const createPostSchema = z.object({
@@ -24,7 +23,7 @@ export interface CreatePostFormState {
 
 export async function createPost(
     topicSlug: string,
-    formState: CreateTopicFormState,
+    formState: CreatePostFormState,
     formData: FormData
 ): Promise<CreatePostFormState> {
     const result = createPostSchema.safeParse({
